@@ -10,3 +10,11 @@ Piirangud/ограничения
 * NOT NULL
 * UNIQUE
 * CHECK - valik
+
+SQL - Structure Query Language
+* DDL - Data Definition Language - CREATE TABLE, ALTER TABLE, DROP TABLE
+* DML - Data Manipulation Language - INSERT INTO, UPDATE, DELETE
+
+SQL Server Managment Studio
+XAMPP / phpMyAdmin
+
