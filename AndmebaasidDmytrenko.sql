@@ -36,3 +36,7 @@ SELECT * FROM film;
 --FK lisamine mis on seotud tabliga zanr(zanrID)
 ALTER TABLE film  ADD CONSTRAINT fk_zanr
 FOREIGN KEY (zanrID) REFERENCES zanr(zanrID);
+
+SELECT * FROM film;
+SELECT * FROM zanr;
+UPDATE film SET zanrID=1 WHERE filmID=2
