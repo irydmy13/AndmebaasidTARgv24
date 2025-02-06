@@ -79,3 +79,20 @@ WHERE uudiseTeema Like @taht+'%';
 END;
 --kutse
 EXEC otsingUudiseTeema 'w';
+
+
+
+--XAMPP/localhost
+CREATE TABLE uudised(
+uudisID int PRIMARY KEY AUTO_INCREMENT,
+uudiseTEEMA varchar(50),
+kuupaev date,
+autor varchar(25),
+kirjeldus text
+);
+ INSERT INTO uudised(
+ uudiseTeema, kuupaev, autor, kirjeldus)
+VALUES(
+'udune ilm', '2025-02-06', 'postimees', 'Lounani on udune ilm')
+
+CALL lisauudis('windows 11', '2025-02-06', 'õpetaja Pant', 'win11 ei tööta multimeedia klassis');--вызвать 
