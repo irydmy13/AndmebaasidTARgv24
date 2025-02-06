@@ -48,3 +48,21 @@ END;
 --kutse
 EXEC kustutaUudis 3;
 EXEC kustutaUudis @id=3;
+
+UPDATE uudised SET kirjeldus = 'uus kirjeldus'
+WHERE kirjeldus LIKE 'puudub';
+SELECT * FROM uudised;
+
+-- pritseduur mis uuendab andmed tabelis/UPDATE
+CREATE PROCEDURE uuendaKirjeldus
+@uuskirjeldus text
+AS
+BEGIN
+SELECT * FROM uudised;
+UPDATE uudised SET kirjeldus = @uuskirjeldus
+WHERE kirjeldus LIKE 'puudub';
+SELECT * FROM uudised;
+END;
+
+-- kutse
+EXEC uuendaKirjeldus 'uus tekst kirjelduses';
