@@ -1,0 +1,2 @@
+--SQL SALVESTATUD-- FUNKTSIOONID - mitu SQL kasku kaivitakse jarjest
+--SQL SERVER
