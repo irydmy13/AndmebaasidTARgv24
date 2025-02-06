@@ -1,5 +1,3 @@
---SQL SALVESTATUD-- FUNKTSIOONID - mitu SQL kasku kaivitakse jarjest
---SQL SERVER
 CREATE DATABASE procTARgv24;
 
 USE procTARgv24;
@@ -37,3 +35,16 @@ EXEC lisaUudis
 @paev='2025-02-06',
 @autor='test',
 @kirjeldus='puudub';
+
+-- protseduur, mis kustutamine tabelist ID järgi
+CREATE PROCEDURE kustutaUudis
+@id int
+AS
+BEGIN
+SELECT *FROM uudised;
+DELETE FROM uudised WHERE uudisID=@id;
+SELECT * FROM uudised;
+END;
+--kutse
+EXEC kustutaUudis 3;
+EXEC kustutaUudis @id=3;
