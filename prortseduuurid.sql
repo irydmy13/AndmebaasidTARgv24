@@ -66,3 +66,16 @@ END;
 
 -- kutse
 EXEC uuendaKirjeldus 'uus tekst kirjelduses';
+EXEC uuendaKirjeldus @uuskirjeldus='uus tekst kirjelduses';
+--protseduur mis otsib ja naitab uudist esimese tahte jargi
+
+
+CREATE PROCEDURE otsingUudiseTeema
+@taht char(1)
+AS
+BEGIN
+SELECT *FROM uudised 
+WHERE uudiseTeema Like @taht+'%';
+END;
+--kutse
+EXEC otsingUudiseTeema 'w';
