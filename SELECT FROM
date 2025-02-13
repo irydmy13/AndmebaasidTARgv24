@@ -1,0 +1,9 @@
+use procTARgv24;
+Create table laps(
+lapsID int primary key identity(1,1),
+nimi varchar(10) not null,
+pikkus smallint,
+synniaasta smallint,
+Synnilinn varchar(20)
+);
+SELECT * FROM laps;
